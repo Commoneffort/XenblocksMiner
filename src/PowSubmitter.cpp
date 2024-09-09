@@ -54,7 +54,7 @@ void PowSubmitter::submitPow(const std::string& account_address, const std::stri
 
             std::cout << "Payload: " << payload.dump(4) << std::endl;
 
-            HttpResponse powResponse = httpClient.HttpPost("http://xenblocks.io:4446/send_pow", payload, 10000);
+            HttpResponse powResponse = httpClient.HttpPost("http://rpc.xenblocks.io:4446/send_pow", payload, 10000);
             std::cout << "Server Response: " << powResponse.GetBody() << std::endl;
         }
     } catch (const std::exception& e) {
